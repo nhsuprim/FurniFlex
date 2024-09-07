@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { IProduct, useProduct } from "../../contextApi/ProductContext";
 import { useCart } from "../../contextApi/CartContext";
+import { toast } from "react-toastify";
 
 const ProductList: React.FC = () => {
     const { products } = useProduct();
@@ -23,6 +24,7 @@ const ProductList: React.FC = () => {
 
     const handleAddProductToCart = (product: IProduct) => {
         addToCart(product);
+        toast(<p className="font-semibold">Added to the cart</p>);
     };
 
     // Filter products based on the selected category
@@ -36,8 +38,8 @@ const ProductList: React.FC = () => {
     );
 
     return (
-        <div className="container mx-auto py-8 flex justify-center">
-            <div className="w-1/4">
+        <div className="container mx-auto  sm:inline-block md:flex justify-center mt-6 ">
+            <div className="md:w-1/4 ">
                 <ul className="space-y-2 px-12">
                     {categories.map((category) => (
                         <li
@@ -55,7 +57,7 @@ const ProductList: React.FC = () => {
                     ))}
                 </ul>
             </div>
-            <div className="w-3/4">
+            <div className="md:w-3/4">
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8">
                     {filteredProducts.map((product) => (
                         <div

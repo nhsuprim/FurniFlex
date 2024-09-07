@@ -1,14 +1,12 @@
 import React, { createContext, useContext, useState, ReactNode } from "react";
 import { IProduct } from "./ProductContext";
 
-// Define the type for cart items
 interface CartItem extends IProduct {
     quantity: number;
     discountedPrice: number;
     totalPrice: number;
 }
 
-// Define the type for the cart context
 interface CartContextType {
     cart: CartItem[];
     addToCart: (product: IProduct) => void;
@@ -16,13 +14,12 @@ interface CartContextType {
     incrementQuantity: (id: string) => void;
     decrementQuantity: (id: string) => void;
     getTotalPrice: () => number;
-    getTotalQuantity: () => number; // New method to get total quantity
+    getTotalQuantity: () => number;
+    clearCart: () => void;
 }
 
-// Create the cart context
 const CartContext = createContext<CartContextType | undefined>(undefined);
 
-// Function to calculate the discounted price
 const calculateDiscountedPrice = (
     price: number,
     discountPercentage: number
@@ -30,7 +27,6 @@ const calculateDiscountedPrice = (
     return price - price * (discountPercentage / 100);
 };
 
-// Provider component
 export const CartProvider: React.FC<{ children: ReactNode }> = ({
     children,
 }) => {
@@ -111,6 +107,10 @@ export const CartProvider: React.FC<{ children: ReactNode }> = ({
         return cart.reduce((acc, item) => acc + item.quantity, 0);
     };
 
+    const clearCart = () => {
+        setCart([]);
+    };
+
     return (
         <CartContext.Provider
             value={{
@@ -120,7 +120,8 @@ export const CartProvider: React.FC<{ children: ReactNode }> = ({
                 incrementQuantity,
                 decrementQuantity,
                 getTotalPrice,
-                getTotalQuantity, // Provide the getTotalQuantity function to the context
+                getTotalQuantity,
+                clearCart,
             }}
         >
             {children}
@@ -128,7 +129,6 @@ export const CartProvider: React.FC<{ children: ReactNode }> = ({
     );
 };
 
-// Custom hook to use the cart context
 export const useCart = () => {
     const context = useContext(CartContext);
     if (!context) {

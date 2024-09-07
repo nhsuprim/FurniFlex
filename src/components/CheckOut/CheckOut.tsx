@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { useCart } from "../../contextApi/CartContext";
 import { useAuth } from "../../contextApi/AuthContext";
+import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 
 const CheckOut = () => {
-    const { cart, getTotalPrice } = useCart();
+    const { cart, getTotalPrice, clearCart } = useCart();
     const { user, isAuthenticated } = useAuth();
+    const navigate = useNavigate();
 
-    // State for address form
     const [formData, setFormData] = useState({
         name: "",
         address: "",
@@ -16,7 +18,6 @@ const CheckOut = () => {
         country: "",
     });
 
-    // State for dynamic calculations
     const [shippingFee, setShippingFee] = useState(0);
     const [tax, setTax] = useState(0);
 
@@ -51,11 +52,9 @@ const CheckOut = () => {
         calculateShippingFee();
         calculateTax();
 
-        console.log("Form Data:", formData);
-        console.log("Shipping Fee:", shippingFee);
-        console.log("Tax:", tax);
-        console.log("Total Price:", getTotalPrice() + shippingFee + tax);
-        // router.push("/payment"); // Assuming you have a payment page
+        toast(<p className="font-semibold">Order Confirmed</p>);
+        navigate("/products");
+        clearCart();
     };
 
     return (
