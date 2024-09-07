@@ -28,7 +28,7 @@ const SignUp: React.FC = () => {
 
     return (
         <div className="container mx-auto font-barlow px-4">
-            <div className="flex flex-col lg:flex-row w-full items-center justify-center min-h-screen shadow-md rounded-lg overflow-hidden gap-8 lg:gap-16 ">
+            <div className="flex flex-col lg:flex-row w-full items-center justify-center min-h-screen shadow-md rounded-lg overflow-hidden gap-8 lg:gap-16">
                 <div className="w-full lg:w-1/2 px-6 lg:px-20 py-10 lg:py-16 bg-white font-medium">
                     <h2 className="text-2xl font-bold mb-4 text-center">
                         Welcome To
@@ -37,7 +37,7 @@ const SignUp: React.FC = () => {
                         Furni <span className="text-[#1E99E5]">Flex</span>
                     </h1>
                     <p className="text-gray-600 font-medium mb-10 text-center">
-                        Signup for purchase your desire products
+                        Signup to purchase your desired products
                     </p>
 
                     <form onSubmit={handleSignUp} className="space-y-4">
@@ -109,10 +109,7 @@ const SignUp: React.FC = () => {
                                 htmlFor="terms"
                                 className="text-sm text-gray-600"
                             >
-                                I agree to the{" "}
-                                <p className="text-blue-600 hover:underline">
-                                    Terms & Policy
-                                </p>
+                                I agree to the <u>Terms & Policy</u>
                             </label>
                         </div>
                         <button

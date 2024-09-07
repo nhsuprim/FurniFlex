@@ -59,16 +59,6 @@ const Login: React.FC = () => {
                             </div>
                         </div>
 
-                        <div className="flex items-center mt-4">
-                            <input type="checkbox" className="mr-2" />
-                            <span className="text-sm">
-                                I agree to the{" "}
-                                <u className="text-indigo-500">
-                                    Terms & Policy
-                                </u>
-                            </span>
-                        </div>
-
                         <button
                             type="submit"
                             className="w-full px-4 py-4 bg-black text-white font-medium rounded-lg shadow-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50"
