@@ -1,0 +1,65 @@
+[
+    {
+        "id": "1",
+        "image": "../img/Colored Wooden Chair.png",
+        "name": "Colored Wooden",
+        "description": "It has a backrest that can be tilted back, and often a footrest extended",
+        "price": 100,
+        "category": "Rocking chair",
+        "discountPercentage": 30
+    },
+    {
+        "id": "2",
+        "image": "../img/Recliner Chair Wood.png",
+        "name": "Recliner Chair Wood",
+        "description": "It has a backrest that can be tilted back, and often a footrest extended",
+        "price": 100,
+        "category": "Rocking chair",
+        "discountPercentage": 30
+    },
+    {
+        "id": "3",
+        "image": "../img/image 147.png",
+        "name": "Blank Bamboo Wicker",
+        "description": "Lightweight, easy to clean, sturdy, safe and stable. Non-slip legs",
+        "price": 100,
+        "category": "Rocking chair",
+        "discountPercentage": 30
+    },
+    {
+        "id": "4",
+        "image": "../img/image 148.png",
+        "name": "Isolated Wooden Rock",
+        "description": "It has a backrest that can be tilted back, and often a footrest extended",
+        "price": 100,
+        "category": "Rocking chair",
+        "discountPercentage": 30
+    },
+    {
+        "id": "5",
+        "image": "../img/image 149.png",
+        "name": "Minimal Empty Rocking",
+        "description": "A seat, especially for one person, usually having four legs for support.",
+        "price": 100,
+        "category": "Rocking chair",
+        "discountPercentage": 30
+    },
+    {
+        "id": "6",
+        "image": "../img/Timber Ride Padded.png",
+        "name": "Timber Ride Padded",
+        "description": "High Back Rocking Side Pocket Portable Folding Outdoor Camping Chairs ",
+        "price": 100,
+        "category": "Rocking chair",
+        "discountPercentage": 30
+    },
+    {
+        "id": "7",
+        "image": "../img/Timber Ride Padded.png",
+        "name": "Timber Ride Padded",
+        "description": "High Back Rocking Side Pocket Portable Folding Outdoor Camping Chairs ",
+        "price": 100,
+        "category": "Lounge chair",
+        "discountPercentage": 30
+    }
+]
