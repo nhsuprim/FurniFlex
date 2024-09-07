@@ -29,7 +29,6 @@ const SignUp: React.FC = () => {
     return (
         <div className="container mx-auto font-barlow px-4">
             <div className="flex flex-col lg:flex-row w-full items-center justify-center min-h-screen shadow-md rounded-lg overflow-hidden gap-8 lg:gap-16 ">
-                {/* Sign-Up Form Section */}
                 <div className="w-full lg:w-1/2 px-6 lg:px-20 py-10 lg:py-16 bg-white font-medium">
                     <h2 className="text-2xl font-bold mb-4 text-center">
                         Welcome To
@@ -111,12 +110,9 @@ const SignUp: React.FC = () => {
                                 className="text-sm text-gray-600"
                             >
                                 I agree to the{" "}
-                                <a
-                                    href="#"
-                                    className="text-blue-600 hover:underline"
-                                >
+                                <p className="text-blue-600 hover:underline">
                                     Terms & Policy
-                                </a>
+                                </p>
                             </label>
                         </div>
                         <button
@@ -134,7 +130,6 @@ const SignUp: React.FC = () => {
                     </div>
 
                     <div className="flex flex-col lg:flex-row gap-4">
-                        {/* Sign up with Google */}
                         <button className="flex items-center justify-center w-full lg:w-1/2 px-4 py-3 border border-gray-300 rounded-lg shadow-sm hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-indigo-500 gap-2">
                             <img
                                 src={google}
@@ -144,7 +139,6 @@ const SignUp: React.FC = () => {
                             <span>Sign up with Google</span>
                         </button>
 
-                        {/* Sign up with Apple */}
                         <button className="flex items-center justify-center w-full lg:w-1/2 px-4 py-3 border border-gray-300 rounded-lg shadow-sm hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-indigo-500 gap-2">
                             <img
                                 src={apple}
@@ -166,7 +160,6 @@ const SignUp: React.FC = () => {
                     </p>
                 </div>
 
-                {/* Image Section */}
                 <div className="w-full lg:w-1/2 relative">
                     <img
                         src={image}

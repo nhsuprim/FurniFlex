@@ -18,55 +18,55 @@ const Footer = () => {
                     </aside>
                     <nav className="mb-6 lg:mb-0">
                         <h6 className="text-white text-xl pb-2">About Us</h6>
-                        <a className="block text-stone-400 hover:text-white">
+                        <p className="block text-stone-400 hover:text-white">
                             Master Plan
-                        </a>
-                        <a className="block text-stone-400 hover:text-white">
+                        </p>
+                        <p className="block text-stone-400 hover:text-white">
                             Jobs
-                        </a>
-                        <a className="block text-stone-400 hover:text-white">
+                        </p>
+                        <p className="block text-stone-400 hover:text-white">
                             Invest
-                        </a>
-                        <a className="block text-stone-400 hover:text-white">
+                        </p>
+                        <p className="block text-stone-400 hover:text-white">
                             Pressroom
-                        </a>
-                        <a className="block text-stone-400 hover:text-white">
+                        </p>
+                        <p className="block text-stone-400 hover:text-white">
                             Blog
-                        </a>
-                        <a className="block text-stone-400 hover:text-white">
+                        </p>
+                        <p className="block text-stone-400 hover:text-white">
                             Contact
-                        </a>
+                        </p>
                     </nav>
                     <nav className="mb-6 lg:mb-0">
                         <h6 className="text-white text-xl pb-2">
                             Explore EEVE
                         </h6>
-                        <a className="block text-stone-400 hover:text-white">
+                        <p className="block text-stone-400 hover:text-white">
                             Unlock My Robot Power
-                        </a>
-                        <a className="block text-stone-400 hover:text-white">
+                        </p>
+                        <p className="block text-stone-400 hover:text-white">
                             Straight
-                        </a>
-                        <a className="block text-stone-400 hover:text-white">
+                        </p>
+                        <p className="block text-stone-400 hover:text-white">
                             Robot Platform
-                        </a>
-                        <a className="block text-stone-400 hover:text-white">
+                        </p>
+                        <p className="block text-stone-400 hover:text-white">
                             EEVE Roadmap
-                        </a>
+                        </p>
                     </nav>
                     <nav>
                         <h6 className="text-white text-xl pb-2">
                             Community & Support
                         </h6>
-                        <a className="block text-stone-400 hover:text-white">
+                        <p className="block text-stone-400 hover:text-white">
                             Willow X Community
-                        </a>
-                        <a className="block text-stone-400 hover:text-white">
+                        </p>
+                        <p className="block text-stone-400 hover:text-white">
                             Developer & Maker Access
-                        </a>
-                        <a className="block text-stone-400 hover:text-white">
+                        </p>
+                        <p className="block text-stone-400 hover:text-white">
                             Special Cases
-                        </a>
+                        </p>
                     </nav>
                 </div>
 

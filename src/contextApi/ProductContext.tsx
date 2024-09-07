@@ -6,7 +6,6 @@ import React, {
     ReactNode,
 } from "react";
 
-// Define the product interface
 export interface IProduct {
     id: string;
     image: string;
@@ -17,22 +16,18 @@ export interface IProduct {
     discountPercentage: number;
 }
 
-// Define the context type
 interface IProductContextType {
     products: IProduct[];
 }
 
-// Create the context
 const ProductContext = createContext<IProductContextType | undefined>(
     undefined
 );
 
-// Define the type for the provider props
 interface ProductProviderProps {
     children: ReactNode;
 }
 
-// Provider component
 export const ProductProvider: React.FC<ProductProviderProps> = ({
     children,
 }) => {
@@ -51,7 +46,6 @@ export const ProductProvider: React.FC<ProductProviderProps> = ({
     );
 };
 
-// Custom hook to use the Product context
 export const useProduct = () => {
     const context = useContext(ProductContext);
     if (context === undefined) {

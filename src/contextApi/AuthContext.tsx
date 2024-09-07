@@ -32,12 +32,10 @@ interface AuthProviderProps {
     children: ReactNode;
 }
 
-// Provider component
 export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     const [user, setUser] = useState<User | null>(null);
     const isAuthenticated = user !== null;
 
-    // Load the current logged-in user from localStorage when the app initializes
     useEffect(() => {
         const loggedInUser = localStorage.getItem("loggedInUser");
         if (loggedInUser) {
@@ -54,7 +52,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
         );
         if (foundUser) {
             setUser(foundUser);
-            localStorage.setItem("loggedInUser", JSON.stringify(foundUser)); // Persist logged-in user
+            localStorage.setItem("loggedInUser", JSON.stringify(foundUser));
         } else {
             alert("Invalid email or password");
         }
@@ -78,14 +76,14 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
 
         const newUser = { firstName, lastName, email, password };
         users.push(newUser);
-        localStorage.setItem("users", JSON.stringify(users)); // Store updated users array
+        localStorage.setItem("users", JSON.stringify(users));
 
         setUser(newUser);
-        localStorage.setItem("loggedInUser", JSON.stringify(newUser)); // Persist logged-in user
+        localStorage.setItem("loggedInUser", JSON.stringify(newUser));
     };
 
     const logout = () => {
-        localStorage.removeItem("loggedInUser"); // Remove the logged-in user from localStorage
+        localStorage.removeItem("loggedInUser");
         setUser(null);
     };
 
@@ -98,7 +96,6 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     );
 };
 
-// Custom hook for accessing Auth context
 export const useAuth = () => {
     const context = useContext(AuthContext);
     if (context === undefined) {

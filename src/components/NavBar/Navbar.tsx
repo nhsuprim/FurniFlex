@@ -13,7 +13,6 @@ const Navbar = () => {
         <div className="bg-white shadow-lg sticky top-0 z-50">
             <div className="navbar container mx-auto py-4">
                 <div className="navbar-start">
-                    {/* Mobile Dropdown Menu */}
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
                             <svg
@@ -35,14 +34,6 @@ const Navbar = () => {
                             tabIndex={0}
                             className="menu dropdown-content mt-3 z-[1] p-2 shadow bg-white rounded-box w-52"
                         >
-                            <li>
-                                <NavLink
-                                    to="/cart"
-                                    className="hover:bg-gray-100"
-                                >
-                                    Cart
-                                </NavLink>
-                            </li>
                             <li>
                                 <NavLink
                                     to="/products"
@@ -78,7 +69,6 @@ const Navbar = () => {
                         </ul>
                     </div>
 
-                    {/* Logo Section */}
                     <Link
                         to="/"
                         className="flex items-center space-x-2 text-2xl font-bold"
@@ -90,7 +80,6 @@ const Navbar = () => {
                     </Link>
                 </div>
 
-                {/* Center Links for Larger Screens */}
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal space-x-8">
                         <li>
@@ -136,9 +125,7 @@ const Navbar = () => {
                     </ul>
                 </div>
 
-                {/* Cart and User Authentication Section */}
                 <div className="navbar-end flex items-center space-x-4">
-                    {/* Cart Icon with Badge */}
                     <NavLink to="/cart" className="relative flex items-center">
                         <FaShoppingCart className="text-xl" />
                         <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
@@ -146,7 +133,6 @@ const Navbar = () => {
                         </span>
                     </NavLink>
 
-                    {/* Auth Section */}
                     {isAuthenticated ? (
                         <div className="flex items-center space-x-4">
                             <span className="text-lg font-semibold text-gray-700">
@@ -166,12 +152,6 @@ const Navbar = () => {
                                 className="btn btn-primary btn-sm"
                             >
                                 Login
-                            </Link>
-                            <Link
-                                to="/signup"
-                                className="btn btn-secondary btn-sm"
-                            >
-                                Sign Up
                             </Link>
                         </div>
                     )}

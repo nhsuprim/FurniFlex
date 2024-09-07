@@ -19,7 +19,6 @@ const HomePage: React.FC = () => {
         autoplaySpeed: 3000,
     };
 
-    // Get the first three products from the products array
     const topThreeProducts = products.slice(0, 3);
 
     return (
@@ -41,7 +40,7 @@ const HomePage: React.FC = () => {
                                     products. Don’t miss out on special offers
                                     and discounts.
                                 </p>
-                                <button className="mt-6 bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                <button className="btn btn-primary bg-black text-white mt-8 px-10">
                                     <Link to="/products">Shop Now!!</Link>
                                 </button>
                             </div>

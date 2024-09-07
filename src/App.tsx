@@ -29,7 +29,7 @@ function App() {
         <Router>
             <Routes>
                 <Route path="/login" element={<LoginWithLayout />} />
-                <Route path="/" element={<ProductListWithLayout />} />
+                <Route path="/" element={<HomeWithLayout />} />
                 <Route path="/signup" element={<SignUpWithLayout />} />
                 <Route path="/products" element={<ProductListWithLayout />} />
                 <Route path="/cart" element={<CartWithLayout />} />

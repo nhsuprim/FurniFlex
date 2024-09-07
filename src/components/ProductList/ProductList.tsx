@@ -27,12 +27,10 @@ const ProductList: React.FC = () => {
         toast(<p className="font-semibold">Added to the cart</p>);
     };
 
-    // Filter products based on the selected category
     const filteredProducts = selectedCategory
         ? products.filter((product) => product.category === selectedCategory)
         : products;
 
-    // Convert Set to Array for categories
     const categories = Array.from(
         new Set(products.map((product) => product.category))
     );
